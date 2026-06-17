@@ -1,294 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Garishma Gupta — Senior Technology & Operations Leader</title>
-  <meta name="description" content="PMP-certified Technology & Operations Leader with 10+ years across healthcare-tech and BFSI. AI strategy, digital transformation, portfolio management." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garishma Gupta — Senior Technology & Operations Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-<!-- ═══════════════════════════════ NAVIGATION ═══════════════════════════════ -->
 <nav class="nav" id="nav">
-  <a class="logo" onclick="scrollToTop()">Garishma <span class="logo-accent">Gupta</span></a>
-  <ul class="nav-links">
-    <li><a class="nav-link" onclick="scrollToSection('#about')">About</a></li>
-    <li><a class="nav-link" onclick="scrollToSection('#experience')">Experience</a></li>
-    <li><a class="nav-link" onclick="scrollToSection('#achievements')">Achievements</a></li>
-    <li><a class="nav-link" onclick="scrollToSection('#skills')">Skills</a></li>
-    <li><a class="nav-link" onclick="scrollToSection('#certifications')">Credentials</a></li>
-    <li><a class="nav-link" onclick="scrollToSection('#contact')">Contact</a></li>
-  </ul>
-  <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <a class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">Garishma <span class="logo-accent">Gupta</span></a>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a onclick="scrollToSection('#about');toggleMenu()">About</a>
-  <a onclick="scrollToSection('#experience');toggleMenu()">Experience</a>
-  <a onclick="scrollToSection('#achievements');toggleMenu()">Achievements</a>
-  <a onclick="scrollToSection('#skills');toggleMenu()">Skills</a>
-  <a onclick="scrollToSection('#certifications');toggleMenu()">Credentials</a>
-  <a onclick="scrollToSection('#contact');toggleMenu()">Contact</a>
-</div>
 
-<!-- ═══════════════════════════════ HERO ═══════════════════════════════════ -->
 <section class="hero" id="hero">
-  <video class="video-bg" autoplay loop muted playsinline aria-hidden="true">
-    <source src="./hero-video.mp4" type="video/mp4" />
+  <video class="video-bg" autoplay loop muted playsinline>
+    <source src="./hero-video.mp4" type="video/mp4">
   </video>
-  <div class="hero-overlay"></div>
-  <canvas class="particle-canvas" id="particleCanvas"></canvas>
-  <video class="video-fg" id="heroVideo" autoplay loop muted playsinline>
-    <source src="./hero-video.mp4" type="video/mp4" />
-  </video>
-
   <div class="hero-content">
     <div class="hero-inner">
-      <span class="hero-eyebrow gsap-hero">Senior Technology & Operations Leader · Mumbai, India</span>
-      <span class="hero-name-first gsap-hero">Garishma</span>
-      <span class="hero-name-last gsap-hero">Gupta</span>
-      <p class="hero-tagline gsap-hero">Translating complex operational problems into scalable,<br>AI-led solutions — across healthcare-tech and BFSI.</p>
-      <div class="hero-ctas gsap-hero">
-        <a class="btn-primary" onclick="scrollToSection('#experience')">Explore My Work</a>
-        <a class="btn-secondary" href="/resume" download>Download Resume</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="sound-hint" id="soundHint">
-    <div class="sound-dot"></div>
-    Tap for sound
-  </div>
-
-  <div class="video-controls">
-    <button class="ctrl-btn" id="muteBtn" onclick="toggleMute()" aria-label="Toggle sound">
-      <svg id="iconMuted" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
-      <svg id="iconSound" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-    </button>
-    <button class="ctrl-btn" id="playBtn" onclick="togglePlay()" aria-label="Toggle play">
-      <svg id="iconPause" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-      <svg id="iconPlay" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="display:none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-    </button>
-  </div>
-
-  <div class="scroll-indicator" id="scrollIndicator" onclick="scrollToSection('#about')">
-    <span class="scroll-label">Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════ ABOUT ════════════════════════════════════ -->
-<section class="about-section" id="about">
-  <div class="about-cinematic">
-    <!-- Left — full bleed portrait -->
-    <div class="about-portrait-col">
-      <img src="./about_us_image.jpg" alt="Garishma Gupta" class="about-portrait-full" />
-      <div class="about-portrait-fade"></div>
-    </div>
-    <!-- Right — content -->
-    <div class="about-content-col">
-      <div class="eyebrow reveal">About</div>
-      <h2 class="section-title reveal">Where Technology<br><em>Meets Strategy</em></h2>
-      <div class="divider reveal"></div>
-      <p class="summary-text reveal">{{ summary }}</p>
-      <div class="stats-grid reveal">
-        {% for stat in stats %}
-        <div class="stat-card">
-          <span class="stat-value">{{ stat.value }}</span>
-          <span class="stat-label">{{ stat.label }}</span>
-        </div>
-        {% endfor %}
-      </div>
-      <div class="industry-tags reveal">
-        {% for ind in industries %}
-        <span class="industry-tag">{{ ind }}</span>
-        {% endfor %}
-      </div>
+      <span class="hero-eyebrow">Senior Technology & Operations Leader · Mumbai, India</span>
+      <span class="hero-name-first">Garishma</span>
+      <span class="hero-name-last">Gupta</span>
+      <p class="hero-tagline">Translating complex operational problems into scalable, AI-led solutions — across healthcare-tech and BFSI.</p>
+      <a class="btn-secondary" href="./resume.pdf" download>Download Resume</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════ EXPERIENCE ═══════════════════════════════ -->
-<section class="section experience-section" id="experience">
-  <div class="container">
-    <div class="exp-header">
-      <div class="eyebrow">Career Journey</div>
-      <h2 class="section-title">Professional<br><em>Experience</em></h2>
-      <div class="divider"></div>
-    </div>
-  </div>
-  <div class="stack-container">
-    {% for job in experience %}
-    <div class="stack-item" style="--i: {{ loop.index0 }}">
-      <div class="stack-card">
-        <div class="stack-card-inner container">
-          <div class="entry-meta">
-            <span class="company-name">{{ job.company }}</span>
-            <span class="period-badge">{{ job.period }}</span>
-          </div>
-          <div class="job-title">{{ job.title }}</div>
-          <div class="job-sector">{{ job.sector }} · {{ job.team }} · {{ job.location }}</div>
-          <ul class="bullet-list">
-            {% for a in job.achievements %}
-            <li>{{ a }}</li>
-            {% endfor %}
-          </ul>
-          <div class="stack-card-count">{{ loop.index }} / {{ experience|length }}</div>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-  
+<section id="about">
+<div class="about-cinematic">
+<div class="about-portrait-col">
+<img src="./about_us_image.jpg" alt="Garishma Gupta" class="about-portrait-full">
+</div>
+<div class="about-content-col">
+<h2>Where Technology Meets Strategy</h2>
+<p>
+I'm a results-driven Technology & Operations leader with 10+ years of progressive experience — from technical delivery to heading cross-functional teams, managing multi-project portfolios, and driving organisation-wide digital transformation across healthcare-tech and BFSI.
+</p>
+
+<div class="stats-grid">
+<div class="stat-card"><span class="stat-value">10+</span><span class="stat-label">Years of Experience</span></div>
+<div class="stat-card"><span class="stat-value">20+</span><span class="stat-label">Projects Owned</span></div>
+<div class="stat-card"><span class="stat-value">80–90%</span><span class="stat-label">Manual Effort Reduced</span></div>
+<div class="stat-card"><span class="stat-value">~98%</span><span class="stat-label">AI Solution Accuracy</span></div>
+</div>
+</div>
+</div>
 </section>
 
-<!-- ═══════════════════════════════ ACHIEVEMENTS ═════════════════════════════ -->
-<section class="section achievements-section" id="achievements">
-  <div class="container">
-    <div class="eyebrow reveal">Impact by Numbers</div>
-    <h2 class="section-title reveal">Key<br><em>Achievements</em></h2>
-    <div class="divider reveal"></div>
-    <div class="achievements-grid">
-      {% for a in achievements %}
-      <div class="achievement-card reveal">
-        <span class="achievement-metric">{{ a.metric }}</span>
-        <div class="achievement-headline">{{ a.headline }}</div>
-        <p class="achievement-context">{{ a.context }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+<section id="experience">
+<h2>Professional Experience</h2>
+
+<h3>EPC Tech Pvt. Ltd.</h3>
+<p>Senior Technical Operations Manager | Jul 2025 – Present</p>
+<ul>
+<li>Spearhead technology and operations strategy across 20+ AI and automation initiatives.</li>
+<li>Directed rollout of ILD Connect and cross-functional stakeholder alignment.</li>
+<li>Deployed 15+ automation solutions reducing manual effort by 80–90%.</li>
+<li>Led AI adoption and governance programs.</li>
+</ul>
+
+<h3>STIGYA</h3>
+<p>Senior Software Engineer → Acting Project Manager | Jul 2022 – Sep 2024</p>
+<ul>
+<li>Promoted within 8 months.</li>
+<li>Led a cross-functional team of 15.</li>
+<li>Established Agile delivery processes and reporting structures.</li>
+</ul>
+
+<h3>Tata Consultancy Services</h3>
+<p>Senior Software Engineer → Acting Tech Lead | Aug 2016 – Jun 2022</p>
+
+<h3>Fidelity National Information Services (FIS)</h3>
+<p>Technical Support Representative | Aug 2014 – Jan 2016</p>
 </section>
 
-<!-- ═══════════════════════════════ SKILLS ═══════════════════════════════════ -->
-<section class="section skills-section" id="skills">
-  <div class="container">
-    <div class="eyebrow reveal">Core Competencies</div>
-    <h2 class="section-title reveal">Skills &<br><em>Capabilities</em></h2>
-    <div class="divider reveal"></div>
-    <div class="skills-grid">
-      {% for category, items in competencies.items() %}
-      <div class="skill-card reveal">
-        <div class="skill-category">{{ category }}</div>
-        <div class="skill-tags">
-          {% for item in items %}
-          <span class="skill-tag">{{ item }}</span>
-          {% endfor %}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+<section id="skills">
+<h2>Core Competencies</h2>
+<p>Technology Operations Leadership, Digital Transformation Strategy, Portfolio Management, Stakeholder Management, Agile/Scrum, SDLC, PMP, AI Strategy, Workflow Automation, Python, LangChain, LangGraph, RAG, MCP Server, Neptune DB, Healthcare-Tech, BFSI.</p>
 </section>
 
-<!-- ═══════════════════════════════ CERTIFICATIONS ═══════════════════════════ -->
-<section class="section certs-section" id="certifications">
-  <div class="container">
-    <div class="eyebrow reveal">Credentials</div>
-    <h2 class="section-title reveal">Certifications &<br><em>Education</em></h2>
-    <div class="divider reveal"></div>
+<section id="certifications">
+<h2>Education & Certifications</h2>
+<ul>
+<li>MBA in Information Technology — NMIMS, Mumbai (2024)</li>
+<li>ANIIT in Information Technology — NIIT (2014)</li>
+<li>Bachelor of Commerce — K.J. Somaiya College (2007)</li>
+</ul>
 
-    <!-- Education first — full width banner style -->
-    <div class="edu-header reveal">Education</div>
-    <div class="edu-band reveal">
-      {% for edu in education %}
-      <div class="edu-band-item">
-        <div class="edu-degree">{{ edu.degree }}</div>
-        <div class="edu-institution">{{ edu.institution }}</div>
-        <div class="edu-year">{{ edu.year }}</div>
-      </div>
-      {% endfor %}
-    </div>
-
-    <!-- Certifications below — full width grid -->
-    <div class="certs-header reveal">Professional Certifications</div>
-    <div class="certs-band reveal">
-      {% for cert in certifications %}
-      <div class="cert-band-item">
-        <div class="cert-badge">{{ cert.badge }}</div>
-        <div class="cert-info">
-          <div class="cert-name">{{ cert.name }}</div>
-          <div class="cert-meta">{{ cert.issuer }} · {{ cert.year }}</div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-
-  </div>
+<ul>
+<li>PMP – Project Management Professional (PMI)</li>
+<li>Building Ethical AI Frameworks for PM</li>
+<li>Generative AI Mindset</li>
+<li>Generative AI Overview for Project Managers</li>
+<li>Introduction to Agile</li>
+</ul>
 </section>
 
-<!-- ═══════════════════════════════ CONTACT ══════════════════════════════════ -->
-<section class="section contact-section" id="contact">
-  <canvas class="particle-canvas contact-canvas" id="contactCanvas"></canvas>
-  <div class="container" style="position:relative;z-index:1">
-    <div class="eyebrow reveal">Get in Touch</div>
-    <h2 class="biz-heading" style="margin-bottom:3rem">Let's <em>Connect</em></h2>
-    <!-- <h2 class="section-title reveal" style="margin-bottom:3rem">Let's Connect</h2> -->
-    <!-- Business Card -->
-    <div class="biz-card reveal">
-      <div class="biz-card-left">
-        <div class="biz-portrait-ring">
-          <img src="./smiling_contact_us_image.jpg" alt="Garishma Gupta" class="biz-portrait"
-               onerror="this.parentElement.style.background='var(--surface)'" />
-        </div>
-        <div class="biz-sparkle biz-sparkle-1">✦</div>
-        <div class="biz-sparkle biz-sparkle-2">✦</div>
-      </div>
-      <div class="biz-card-right">
-        <div class="biz-details">
-          <div class="biz-row">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.35 2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span>+91 961 932 3028</span>
-          </div>
-          <div class="biz-row">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <a href="mailto:garishma.gari@gmail.com" class="biz-link">garishma.gari@gmail.com</a>
-          </div>
-          <div class="biz-row">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Mumbai, India</span>
-          </div>
-          <div class="biz-row">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            <a href="https://www.linkedin.com/in/garishma-gupta" target="_blank" class="biz-link">linkedin.com/in/garishma-gupta</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      <p class="footer-text">© 2026 Garishma Gupta · Senior Technology & Operations Leader · Mumbai, India</p>
-    </div>
-  </div>
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: garishma.gari@gmail.com</p>
+<p>Phone: +91 9619323028</p>
+<p>Mumbai, India</p>
+<p><a href="https://www.linkedin.com/in/garishma-gupta">LinkedIn</a></p>
 </section>
-<!-- Back to Top Button -->
-<button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <polyline points="18 15 12 9 6 15"/>
-  </svg>
-</button>
-<!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
 <script src="./particles.js"></script>
 <script src="./main.js"></script>
-<script>
-  function scrollToSection(selector) {
-    document.querySelector(selector)?.scrollIntoView({
-        behavior: "smooth"
-    });
-}
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-  // Make back-to-top button work
-  document.getElementById('backToTop').addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
 </body>
 </html>
