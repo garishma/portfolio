@@ -1,4 +1,4 @@
-# Garishma Gupta — Executive Portfolio (FastAPI)
+# Garishma Gupta — Portfolio
 
 A production-ready cinematic executive portfolio built with FastAPI, Jinja2, Three.js, and GSAP.
 
