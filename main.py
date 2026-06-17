@@ -35,7 +35,7 @@ async def home(request: Request):
 
 @app.get("/resume")
 async def download_resume():
-    path = Path("static/resume.pdf")
+    path = Path("./resume.pdf")
     if path.exists():
         return FileResponse(
             path,
