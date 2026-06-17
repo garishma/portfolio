@@ -12,33 +12,37 @@
 <body>
 
 <nav class="nav" id="nav">
-  <a class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">Garishma <span class="logo-accent">Gupta</span></a>
+  <a class="logo" onclick="scrollToTop()">Garishma <span class="logo-accent">Gupta</span></a>
 </nav>
 
 <section class="hero" id="hero">
   <video class="video-bg" autoplay loop muted playsinline>
     <source src="./hero-video.mp4" type="video/mp4">
   </video>
+  <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-inner">
       <span class="hero-eyebrow">Senior Technology & Operations Leader · Mumbai, India</span>
       <span class="hero-name-first">Garishma</span>
       <span class="hero-name-last">Gupta</span>
       <p class="hero-tagline">Translating complex operational problems into scalable, AI-led solutions — across healthcare-tech and BFSI.</p>
-      <a class="btn-secondary" href="./resume.pdf" download>Download Resume</a>
+      <div class="hero-ctas">
+        <a class="btn-secondary" href="./resume.pdf" download>Download Resume</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="about">
+<section class="about-section" id="about">
 <div class="about-cinematic">
 <div class="about-portrait-col">
 <img src="./about_us_image.jpg" alt="Garishma Gupta" class="about-portrait-full">
 </div>
 <div class="about-content-col">
-<h2>Where Technology Meets Strategy</h2>
-<p>
-I'm a results-driven Technology & Operations leader with 10+ years of progressive experience — from technical delivery to heading cross-functional teams, managing multi-project portfolios, and driving organisation-wide digital transformation across healthcare-tech and BFSI.
+<div class="eyebrow">About</div>
+<h2 class="section-title">Where Technology <em>Meets Strategy</em></h2>
+<p class="summary-text">
+I'm a results-driven Technology & Operations leader with 10+ years of progressive experience from technical delivery to leading cross-functional teams, managing multi-project portfolios, and driving organisation-wide digital transformation across healthcare-tech and BFSI.
 </p>
 
 <div class="stats-grid">
@@ -47,65 +51,123 @@ I'm a results-driven Technology & Operations leader with 10+ years of progressiv
 <div class="stat-card"><span class="stat-value">80–90%</span><span class="stat-label">Manual Effort Reduced</span></div>
 <div class="stat-card"><span class="stat-value">~98%</span><span class="stat-label">AI Solution Accuracy</span></div>
 </div>
+
+<div class="industry-tags">
+<span class="industry-tag">Healthcare-Tech</span>
+<span class="industry-tag">BFSI</span>
+<span class="industry-tag">Tech Services</span>
+</div>
 </div>
 </div>
 </section>
 
-<section id="experience">
-<h2>Professional Experience</h2>
+<section class="section experience-section" id="experience">
+<div class="container">
+<h2 class="section-title">Professional Experience</h2>
 
+<div class="stack-card">
 <h3>EPC Tech Pvt. Ltd.</h3>
-<p>Senior Technical Operations Manager | Jul 2025 – Present</p>
+<p><strong>Senior Technical Operations Manager</strong> | Jul 2025 – Present</p>
 <ul>
-<li>Spearhead technology and operations strategy across 20+ AI and automation initiatives.</li>
-<li>Directed rollout of ILD Connect and cross-functional stakeholder alignment.</li>
-<li>Deployed 15+ automation solutions reducing manual effort by 80–90%.</li>
-<li>Led AI adoption and governance programs.</li>
+<li>Spearhead technology and operations strategy across 20+ AI, automation and digital transformation initiatives.</li>
+<li>Directed rollout of ILD Connect and stakeholder alignment across departments.</li>
+<li>Architected 15+ automation solutions reducing manual effort by 80–90%.</li>
+<li>Led organisation-wide AI adoption and governance programs.</li>
 </ul>
+</div>
 
+<div class="stack-card">
 <h3>STIGYA</h3>
-<p>Senior Software Engineer → Acting Project Manager | Jul 2022 – Sep 2024</p>
+<p><strong>Senior Software Engineer → Acting Project Manager</strong> | Jul 2022 – Sep 2024</p>
 <ul>
-<li>Promoted within 8 months.</li>
-<li>Led a cross-functional team of 15.</li>
-<li>Established Agile delivery processes and reporting structures.</li>
+<li>Promoted within 8 months from Python Developer.</li>
+<li>Led a cross-functional team of 15 developers, testers and designers.</li>
+<li>Established Agile delivery processes and stakeholder reporting.</li>
 </ul>
+</div>
 
+<div class="stack-card">
 <h3>Tata Consultancy Services</h3>
-<p>Senior Software Engineer → Acting Tech Lead | Aug 2016 – Jun 2022</p>
-
-<h3>Fidelity National Information Services (FIS)</h3>
-<p>Technical Support Representative | Aug 2014 – Jan 2016</p>
-</section>
-
-<section id="skills">
-<h2>Core Competencies</h2>
-<p>Technology Operations Leadership, Digital Transformation Strategy, Portfolio Management, Stakeholder Management, Agile/Scrum, SDLC, PMP, AI Strategy, Workflow Automation, Python, LangChain, LangGraph, RAG, MCP Server, Neptune DB, Healthcare-Tech, BFSI.</p>
-</section>
-
-<section id="certifications">
-<h2>Education & Certifications</h2>
+<p><strong>Senior Software Engineer → Acting Tech Lead</strong> | Aug 2016 – Jun 2022</p>
 <ul>
-<li>MBA in Information Technology — NMIMS, Mumbai (2024)</li>
-<li>ANIIT in Information Technology — NIIT (2014)</li>
-<li>Bachelor of Commerce — K.J. Somaiya College (2007)</li>
+<li>Led teams supporting Nordea, Luminor, ABN AMRO and Citibank.</li>
+<li>Owned delivery quality, deployments and stakeholder communication.</li>
 </ul>
+</div>
 
+<div class="stack-card">
+<h3>FIS</h3>
+<p><strong>Technical Support Representative</strong> | Aug 2014 – Jan 2016</p>
 <ul>
-<li>PMP – Project Management Professional (PMI)</li>
-<li>Building Ethical AI Frameworks for PM</li>
-<li>Generative AI Mindset</li>
-<li>Generative AI Overview for Project Managers</li>
-<li>Introduction to Agile</li>
+<li>Managed enterprise IT support lifecycle and SLA compliance.</li>
+<li>Recognized as Best Performer.</li>
 </ul>
+</div>
+</div>
 </section>
 
-<section id="contact">
-<h2>Contact</h2>
-<p>Email: garishma.gari@gmail.com</p>
-<p>Phone: +91 9619323028</p>
+<section class="section achievements-section" id="achievements">
+<div class="container">
+<h2 class="section-title">Key Achievements</h2>
+<div class="achievements-grid">
+<div class="achievement-card"><span class="achievement-metric">80–90%</span><div>Manual Effort Eliminated</div></div>
+<div class="achievement-card"><span class="achievement-metric">20+</span><div>AI Initiatives Owned</div></div>
+<div class="achievement-card"><span class="achievement-metric">~98%</span><div>AI Solution Accuracy</div></div>
+<div class="achievement-card"><span class="achievement-metric">15+</span><div>Team Members Led</div></div>
+</div>
+</div>
+</section>
+
+<section class="section skills-section" id="skills">
+<div class="container">
+<h2 class="section-title">Skills & Capabilities</h2>
+
+<div class="skill-card">
+<h3>Leadership & Strategy</h3>
+<p>Technology Operations Leadership, Digital Transformation Strategy, Portfolio Management, Stakeholder Management, Change Management.</p>
+</div>
+
+<div class="skill-card">
+<h3>Project Delivery</h3>
+<p>PMP, Agile/Scrum, SDLC, Jira, Confluence, Sprint Planning, Risk Management.</p>
+</div>
+
+<div class="skill-card">
+<h3>AI & Automation</h3>
+<p>Python, LangChain, LangGraph, RAG, Prompt Engineering, MCP Server, Neptune DB, Claude APIs.</p>
+</div>
+</div>
+</section>
+
+<section class="section certs-section" id="certifications">
+<div class="container">
+<h2 class="section-title">Education & Certifications</h2>
+
+<div class="edu-band">
+<div class="edu-band-item">MBA in Information Technology — NMIMS (2024)</div>
+<div class="edu-band-item">ANIIT in Information Technology — NIIT (2014)</div>
+<div class="edu-band-item">Bachelor of Commerce — K.J. Somaiya College (2007)</div>
+</div>
+
+<div class="certs-band">
+<div class="cert-band-item">PMP – Project Management Professional</div>
+<div class="cert-band-item">Building Ethical AI Frameworks for PM</div>
+<div class="cert-band-item">Generative AI Mindset</div>
+<div class="cert-band-item">Generative AI Overview for Project Managers</div>
+<div class="cert-band-item">Introduction to Agile</div>
+</div>
+</div>
+</section>
+
+<section class="contact-section" id="contact">
+<div class="container">
+<h2>Let's Connect</h2>
+<img src="./smiling_contact_us_image.jpg" alt="Garishma Gupta" style="max-width:250px;">
+<p>+91 961 932 3028</p>
+<p>garishma.gari@gmail.com</p>
 <p>Mumbai, India</p>
-<p><a href="https://www.linkedin.com/in/garishma-gupta">LinkedIn</a></p>
+<p><a href="https://www.linkedin.com/in/garishma-gupta">LinkedIn Profile</a></p>
+</div>
 </section>
 
 <script src="./particles.js"></script>
